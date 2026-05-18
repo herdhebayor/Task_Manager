@@ -40,7 +40,7 @@ function ProfilePage() {
       if(status === 'loading'){
         return <Loading />
       }
-      
+
       if(!session?.user){
         return (
           <div className={`${darkMode ? 'bg-slate-900 text-zinc-50' : 'bg-zinc-50 text-slate-900'} min-h-screen flex items-center justify-center`}>
@@ -90,11 +90,11 @@ function ProfilePage() {
 
             <div className='flex items-center gap-8 flex-wrap text-xs italic md:text-sm'>
                     <p className={`${darkMode ? 'bg-slate-700' : 'bg-zinc-200'} min-w-fit px-4 md:px-6 py-1 rounded-md  shadow-md flex flex-col-reverse items-center`}>
-                         Total task <span>{totalTask || 0}</span></p>
+                         Total task <span className='font-bold'>{totalTask || 0}</span></p>
                     <p className={`${darkMode ? 'bg-slate-700' : 'bg-zinc-200'} min-w-fit px-4 md:px-6 py-1 rounded-md  shadow-md flex flex-col-reverse items-center`}>
-                        Task completed <span>{totalCompleted || 0}</span></p>
+                        Task completed <span className='font-bold'>{totalCompleted || 0}</span></p>
                     <p className={`${darkMode ? 'bg-slate-700' : 'bg-zinc-200'} min-w-fit px-4 md:px-6 py-1 rounded-md  shadow-md flex flex-col-reverse items-center`}>
-                        Task pending <span>{localPending || 0}</span></p>
+                        Task pending <span className='font-bold'>{localPending || 0}</span></p>
             </div>
         </div>
 

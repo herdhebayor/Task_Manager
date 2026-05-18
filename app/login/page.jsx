@@ -69,7 +69,7 @@ function Register() {
         <div className='flex justify-center items-center h-screen w-full'>
             <div className='container text-zinc-50 h-full flex justify-center items-center px-4  md:px-6  '>
               
-                <div className={`${darkMode ? 'bg-slate-700  border-slate-200 text-zinc-50 ' : 'bg-zinc-100 border-zinc-300 text-slate-900'} md:w-100 w-80 border py-4 px-4 md:px-6 rounded-md`}>
+                <div className={`${darkMode ? 'bg-slate-700  border-slate-200 text-zinc-50 ' : 'bg-zinc-100 border-zinc-300 text-slate-900'} w-100 max-w-full  border py-4 px-4 md:px-6 rounded-md`}>
 
                   {/* header */}
                     <h2 className='text-2xl font-bold text-center mb-6'> Login</h2>
