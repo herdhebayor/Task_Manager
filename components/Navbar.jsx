@@ -43,7 +43,7 @@ function Navbar() {
             </Link>
             <p className={`${darkMode ? 'text-zinc-300' : 'text-slate-900'} text-xs md:text-sm`}>Your productivity companion</p>
         </div>
-        <div className='flex gap-4'>
+        <div className='flex gap-4 items-center'>
             <button
                 type="button"
                 onClick={() => {
@@ -104,7 +104,7 @@ function Navbar() {
                         </div>
                     
                 }
-            </div>) :(<Link href={'/login'} className={`${darkMode ? 'bg-slate-700 hover:bg-slate-600 text-zinc-50' : 'bg-zinc-300 hover:bg-zinc-400 text-slate-900'} px-4 py-1 h-fit rounded-lg text-sm outline-0 cursor-pointer`}>Login or Signup</Link>)
+            </div>) :(<Link href={'/login'} className={`${darkMode ? 'bg-slate-700 hover:bg-slate-600 text-zinc-50' : 'bg-zinc-300 hover:bg-zinc-400 text-slate-900'} px-4 py-2 h-fit rounded-lg text-sm outline-0 cursor-pointer`}>Login or Signup</Link>)
             )}
         </div>
       
