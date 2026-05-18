@@ -69,7 +69,7 @@ function Register() {
         <div className='flex justify-center items-center h-screen w-full'>
             <div className='container text-zinc-50 h-full flex justify-center items-center px-4  md:px-6  '>
               
-                <div className={`${darkMode ? 'bg-slate-700  border-slate-200 text-zinc-50 ' : 'bg-zinc-100 border-zinc-300 text-slate-900'} w-100 max-w-full  border py-4 px-4 md:px-6 rounded-md`}>
+                <div className={`${darkMode ? 'bg-slate-700  border-slate-200 text-zinc-50 ' : 'bg-zinc-100 border-zinc-300 text-slate-900'} md:w-[500px]  w-[400px] sm-w-full  border py-4 px-6 rounded-md`}>
 
                   {/* header */}
                     <h2 className='text-2xl font-bold text-center mb-6'> Login</h2>
@@ -97,7 +97,7 @@ function Register() {
                                 <span onClick={()=> setShowPassword(prev => !prev)} className='absolute top-1/3 text-slate-900 cursor-pointer right-3 my-auto '>{showPassword ? <FaEye/> : <FaEyeSlash/>}</span>
                             </div>
                             <button disabled={btnDisabled} 
-                              className='text-zinc-50 px-4 py-2 cursor-pointer disabled:cursor-not-allowed disabled:bg-zinc-400 flex items-center gap-4 justify-center hover:bg-indigo-500 w-full rounded-md mt-3 bg-indigo-600'>
+                              className='text-zinc-50 px-4 py-2 cursor-pointer disabled:cursor-not-allowed disabled:bg-zinc-400 flex items-center gap-4 justify-center hover:bg-indigo-500 w-full rounded-md mt-3 bg-indigo-600 mt-6'>
                               {loading ? <><ButtonLoading/> Signing in...</>  : "Sign in" }
                             </button>
                           </form>

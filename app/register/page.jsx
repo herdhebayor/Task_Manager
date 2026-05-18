@@ -93,7 +93,7 @@ export default function RegisterForm() {
   return (
     <div className={`${darkMode ? 'bg-slate-900 text-zinc-50' : 'bg-zinc-500 text-slate-900'} w-screen h-screen`}>
       <div className="container h-full px-6 py-8 flex justify-center items-center">
-        <div className=" w-100 block px-4 md:px-6 py-4">
+        <div className=" md:w-[500px] w-[400px] sm:w-full block px-4 md:px-6 py-4">
           {step === 1 && <h2 className="text-2xl font-bold text-center my-3">Register</h2>}
 
           <form className="flex flex-col space-y-3" onSubmit={handleRegister}>
@@ -128,7 +128,7 @@ export default function RegisterForm() {
 
                 <button
                   type="button"
-                  className="bg-indigo-500 px-4 rounded mt-2 py-2 outline-0 hover:bg-indigo-600 cursor-pointer"
+                  className="bg-indigo-500 px-4 rounded mt-2 py-2 outline-0 hover:bg-indigo-600 mt-6 cursor-pointer"
                   onClick={() => {
                     setError('');
                     setStep(2);
@@ -176,7 +176,7 @@ export default function RegisterForm() {
                   onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
                 />
 
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mt-6">
                   <button
                     type="button"
                     onClick={() => setStep(1)}
@@ -229,7 +229,7 @@ export default function RegisterForm() {
 
                 <span className="text-red-500 text-xs">{error}</span>
 
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mt-6">
                   <button
                     type="button"
                     onClick={() => setStep(2)}
