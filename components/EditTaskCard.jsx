@@ -46,7 +46,7 @@ function EditTaskCard({ item, removeEditTaskModal, refresh }) {
             <label htmlFor='title' className='text-sm font-bold mb-1'>
                 Task title :
             </label>
-            <input value={title} maxLength={10} onChange={(e)=> setTitle(e.target.value)} type='text' className={`${darkMode ? 'bg-slate-800 ring-slate-200' : 'bg-zinc-200 ring-zinc-300'} px-4 py-2 rounded-md ring  focus:ring-indigo-500 outline-0`} placeholder='Enter your task tiltle'/>
+            <input value={title} maxLength={50} onChange={(e)=> setTitle(e.target.value)} type='text' className={`${darkMode ? 'bg-slate-800 ring-slate-200' : 'bg-zinc-200 ring-zinc-300'} px-4 py-2 rounded-md ring  focus:ring-indigo-500 outline-0`} placeholder='Enter your task tiltle'/>
         </div>
         <div className='my-2 flex flex-col '>
             <label htmlFor='priority' className='text-sm font-bold mb-1'>
@@ -62,7 +62,7 @@ function EditTaskCard({ item, removeEditTaskModal, refresh }) {
             <label htmlFor='note' className='text-sm font-bold mb-1'>
                 Note :
             </label>
-            <textarea value={note} maxLength={20} onChange={(e)=> setNote(e.target.value)} rows={3} placeholder='Add short note' className={`${darkMode ? 'bg-slate-800 ring-slate-200' : 'bg-zinc-200  ring-slate-300'} px-4 py-1 resize-none rounded-lg ring  appearance-none`}/>
+            <textarea value={note} maxLength={100} onChange={(e)=> setNote(e.target.value)} rows={3} placeholder='Add short note' className={`${darkMode ? 'bg-slate-800 ring-slate-200' : 'bg-zinc-200  ring-slate-300'} px-4 py-1 resize-none rounded-lg ring  appearance-none`}/>
             <p className='text-xs italic'>Hint: Add short note not more than 300 words</p>
         </div>
         <p className='text-red-500 text-xs md:text-sm'>{error}</p>

@@ -28,6 +28,8 @@ export default function Home() {
 
   const [loginError, setLoginError] = useState(false)
 
+  const prio = {'High': 1, 'Medium': 2, 'Low': 3}
+
   const { darkMode } = useGlobalContext()
 
   const {data:session} = useSession()
@@ -260,7 +262,7 @@ export default function Home() {
               className='outline-0 text-red-500 hover:text-red-400 ml-auto w-fit cursor-pointer'
             >Clear all task</button>
           {
-            tasks.filter((t) =>
+            tasks.sort((a, b) => prio[a.priority] - prio[b.priority]).filter((t) =>
               nav === "All" ? true : nav === "Active" ? !t.isCompleted : t.isCompleted
             )
             .map((task) => (
